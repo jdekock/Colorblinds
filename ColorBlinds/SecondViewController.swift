@@ -13,6 +13,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.greenColor()
+        self.title = "Colorblinds"
+        self.view.backgroundColor = .blueColor()
     }
 }

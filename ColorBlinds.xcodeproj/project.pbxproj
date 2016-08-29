@@ -14,6 +14,8 @@
 		BC4CD1F81CC134A100C8D011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4CD1F61CC134A100C8D011 /* Main.storyboard */; };
 		BC4CD1FA1CC134A100C8D011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC4CD1F91CC134A100C8D011 /* Assets.xcassets */; };
 		BC4CD1FD1CC134A100C8D011 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4CD1FB1CC134A100C8D011 /* LaunchScreen.storyboard */; };
+		BCCF56741D74D23B006F24D4 /* CBPixelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF56731D74D23B006F24D4 /* CBPixelHelper.swift */; };
+		BCCF56761D74D4CB006F24D4 /* CBColorBlindTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF56751D74D4CB006F24D4 /* CBColorBlindTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		BC4CD1F91CC134A100C8D011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC4CD1FC1CC134A100C8D011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC4CD1FE1CC134A100C8D011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCCF56731D74D23B006F24D4 /* CBPixelHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CBPixelHelper.swift; path = Source/CBPixelHelper.swift; sourceTree = SOURCE_ROOT; };
+		BCCF56751D74D4CB006F24D4 /* CBColorBlindTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CBColorBlindTypes.swift; path = Source/CBColorBlindTypes.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,8 @@
 			isa = PBXGroup;
 			children = (
 				BC0BD3F91D736CBB00C8CD42 /* ColorBlinds.swift */,
+				BCCF56731D74D23B006F24D4 /* CBPixelHelper.swift */,
+				BCCF56751D74D4CB006F24D4 /* CBColorBlindTypes.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -157,6 +163,8 @@
 			files = (
 				BC4CD1F51CC134A100C8D011 /* ViewController.swift in Sources */,
 				BC4CD1F31CC134A100C8D011 /* AppDelegate.swift in Sources */,
+				BCCF56761D74D4CB006F24D4 /* CBColorBlindTypes.swift in Sources */,
+				BCCF56741D74D23B006F24D4 /* CBPixelHelper.swift in Sources */,
 				BC0BD3FA1D736CBB00C8CD42 /* ColorBlinds.swift in Sources */,
 				BC0BD3F81D736A5700C8CD42 /* SecondViewController.swift in Sources */,
 			);
@@ -272,16 +280,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = ColorBlinds/ColorBlinds.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jordi de Kock (62LH2RW4BS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jordi de Kock (62LH2RW4BS)";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ColorBlinds/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.labela.colors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5082ca7c-6cbd-463d-9ffa-a291d46241c0";
-				SWIFT_OBJC_BRIDGING_HEADER = "ColorBlinds/ColorBlinds-Bridging-Header.h";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -291,7 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = ColorBlinds/ColorBlinds.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ColorBlinds/Info.plist;
@@ -300,7 +308,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nl.labela.colors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "ColorBlinds/ColorBlinds-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
