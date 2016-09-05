@@ -3,7 +3,7 @@
 //  ColorBlinds
 //
 //  Created by Jordi de Kock on 15-04-16.
-//  Copyright © 2016 Label A. All rights reserved.
+//  Copyright © 2016 Jordi de Kock. All rights reserved.
 //
 
 import UIKit
@@ -13,8 +13,11 @@ import CoreGraphics
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let cbController = ColorBlinds()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        cbController.startForWindow(window!)
+        
         return true
     }
 
