@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        ColorBlinds.sharedInstance.startForWindow(window!)
+        Colorblinds.sharedInstance.startForWindow(window!)
         
         return true
     }

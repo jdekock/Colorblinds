@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ColorBlinds: NSObject, UIActionSheetDelegate {
+class Colorblinds: NSObject, UIActionSheetDelegate {
     var screenshot: UIImage!
     var imageOverlay: UIImageView!
     var timer: NSTimer!
@@ -19,12 +19,12 @@ class ColorBlinds: NSObject, UIActionSheetDelegate {
         super.init()
     }
     
-    static let sharedInstance = ColorBlinds()
+    static let sharedInstance = Colorblinds()
     
     func startForWindow(window: UIWindow) {
         mainWindow = window
         
-        let tapGesture = UITapGestureRecognizer.init(target: self, action:#selector(ColorBlinds.startColorBlinds))
+        let tapGesture = UITapGestureRecognizer.init(target: self, action:#selector(Colorblinds.startColorBlinds))
         tapGesture.numberOfTapsRequired = 3
         mainWindow.userInteractionEnabled = true
         mainWindow.addGestureRecognizer(tapGesture)
@@ -83,7 +83,7 @@ class ColorBlinds: NSObject, UIActionSheetDelegate {
         imageOverlay.image = image
         mainWindow.addSubview(imageOverlay)
             
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ColorBlinds.updateScreen), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(Colorblinds.updateScreen), userInfo: nil, repeats: true)
     }
     
     func stopColorblinds() {
