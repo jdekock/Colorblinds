@@ -19,6 +19,8 @@ class ColorBlinds: NSObject, UIActionSheetDelegate {
         super.init()
     }
     
+    static let sharedInstance = ColorBlinds()
+    
     func startForWindow(window: UIWindow) {
         mainWindow = window
         

@@ -8,19 +8,25 @@ Colorblinds is a easy to use library to simulate colorblindness within your app.
 # Compatibility
 Colorblinds requires iOS 8 or higher and is written in Swift 2.2.
 
-# Installation
-Right now only manual installation is supported. Cocoapods and Carthage installation will be added soon.
+### Using CocoaPods
+Colorblinds is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
 
-For manual installation include the ColorBlinds.swift in your project. After that you can use it with just two lines of code:
+```ruby
+pod ‘Colorblinds’
+```
 
-```sh
-let cbController = ColorBlinds()
-cbController.start()
+### Manually
+Clone or Download this Repo. Then simply drag files in the folder ```Source``` to your Xcode project.
+
+
+# Example
+```Swift
+ColorBlinds.sharedInstance.startForWindow(window!)
 ```
 
 # Todos
  - Add CI
- - Support CocoaPods and Carthage
  - Support animations
 
 # License

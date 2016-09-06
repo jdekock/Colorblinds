@@ -13,10 +13,9 @@ import CoreGraphics
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let cbController = ColorBlinds()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        cbController.startForWindow(window!)
+        ColorBlinds.sharedInstance.startForWindow(window!)
         
         return true
     }
