@@ -3,7 +3,12 @@
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/qmathe/DropDownMenuKit/LICENSE)
 
 # Colorblinds
-Colorblinds is a easy to use library to simulate colorblindness within your app. The feature can be easily activated with a 3-tap gesture.
+Colorblinds is a easy to use library to simulate color blindness within your app. The feature can be easily activated with a 3-tap gesture. Once activated you can choose from four types of color blindness:
+
+- Deuteranomaly
+- Deuteranopia
+- Protanomaly
+- Protanopia
 
 # Compatibility
 Colorblinds requires iOS 8 or higher and is written in Swift 2.2.
