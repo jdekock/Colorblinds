@@ -22,7 +22,6 @@ cbController.start()
  - Add CI
  - Support CocoaPods and Carthage
  - Support animations
- - Support different kinds of colorblindness
 
 # License
 MIT
