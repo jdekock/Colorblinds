@@ -34,10 +34,6 @@ class CBColorBlindTypes: NSObject {
             return [(red*0.81667)+(green*0.18333)+(blue*0.0),
                     (red*0.33333)+(green*0.66667)+(blue*0.0),
                     (red*0.0)+(green*0.125)+(blue*0.875)]
-        default:
-            return [(red*1)+(green*1)+(blue*1),
-                    (red*1)+(green*1)+(blue*1),
-                    (red*1)+(green*1)+(blue*1)]
         }
         
     }
