@@ -19,9 +19,9 @@ public class CBController: NSObject, UIActionSheetDelegate {
         super.init()
     }
     
-    static let sharedInstance = CBController()
+    public static let sharedInstance = CBController()
     
-    func startForWindow(window: UIWindow) {
+    public func startForWindow(window: UIWindow) {
         mainWindow = window
         
         let tapGesture = UITapGestureRecognizer.init(target: self, action:#selector(CBController.startColorBlinds))
