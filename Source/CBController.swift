@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CBController: NSObject, UIActionSheetDelegate {
+public class CBController: NSObject, UIActionSheetDelegate {
     var screenshot: UIImage!
     var imageOverlay: UIImageView!
     var timer: NSTimer!
