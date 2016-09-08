@@ -27,12 +27,15 @@ Clone or Download this Repo. Then simply drag files in the folder ```Source``` t
 
 # Example
 ```Swift
+import Colorblinds
 CBController.sharedInstance.startForWindow(window!)
 ```
 
 # Todos
  - Add CI
+ - Support Carthage
  - Support animations
-
+ - Support more color blindness types
+ 
 # License
 MIT
