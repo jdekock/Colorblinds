@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Colorblinds'
-  s.version          = '1.0.2'
+  s.version          = '1.0.4'
   s.summary          = 'Colorblinds is an easy to use library so simulate color blindness in your app.'
 
   s.description      = <<-DESC
@@ -11,7 +11,7 @@ Colorblinds is a easy to use library to simulate color blindness within your app
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Jordi de Kock' => 'jordidekock@gmail.com' }
-  s.source           = { :git => 'https://github.com/jordidekock/Colorblinds.git', :tag => 'v1.0.2' }
+  s.source           = { :git => 'https://github.com/jordidekock/Colorblinds.git', :tag => 'v1.0.4' }
 
   s.ios.deployment_target = '8.0'
 
