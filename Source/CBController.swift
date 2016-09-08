@@ -63,7 +63,13 @@ public class CBController: NSObject, UIActionSheetDelegate {
             self.stopColorblinds()
         }))
         
-        mainWindow.rootViewController?.presentViewController(actionSheet, animated: true, completion: nil)
+        var topController = mainWindow.rootViewController
+        
+        if topController!.presentedViewController != nil {
+            topController = topController!.presentedViewController;
+        }
+        
+        topController!.presentViewController(actionSheet, animated: true, completion: nil)
     }
     
     func setColor() {
