@@ -27,7 +27,7 @@ Clone or Download this Repo. Then simply drag files in the folder ```Source``` t
 
 # Example
 ```Swift
-ColorBlinds.sharedInstance.startForWindow(window!)
+CBController.sharedInstance.startForWindow(window!)
 ```
 
 # Todos
