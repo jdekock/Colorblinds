@@ -1,7 +1,7 @@
 [![Platforms iOS](https://img.shields.io/badge/Platforms-iOS-lightgray.svg?style=flat)](http://www.apple.com)
 [![Language Swift 2.2](https://img.shields.io/badge/Language-Swift%202.2-orange.svg?style=flat)](https://swift.org)
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/jordidekock/Colorblinds/LICENSE)
-[![Version](https://img.shields.io/cocoapods/v/Colorblinds.svg?style=flat)](http://cocoadocs.org/docsets/SwiftMessages)
+[![Version](https://img.shields.io/cocoapods/v/Colorblinds.svg?style=flat)](http://cocoadocs.org/docsets/Colorblinds)
 
 # Colorblinds
 Colorblinds is a easy to use library to simulate color blindness within your app. The feature can be easily activated with a 3-tap gesture. Once activated you can choose from four types of color blindness:
