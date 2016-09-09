@@ -8,7 +8,7 @@ Colorblinds is a easy to use library to simulate color blindness within your app
                        DESC
 
   s.homepage         = 'https://github.com/jordidekock/Colorblinds'
-  s.screenshots     = 'https://github.com/jordidekock/Colorblinds/blob/master/screen1.PNG, 'https://github.com/jordidekock/Colorblinds/blob/master/screen2.PNG'
+  s.screenshots      = 'https://github.com/jordidekock/Colorblinds/blob/master/screen1.PNG, 'https://github.com/jordidekock/Colorblinds/blob/master/screen2.PNG'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Jordi de Kock' => 'jordidekock@gmail.com' }
   s.source           = { :git => 'https://github.com/jordidekock/Colorblinds.git', :tag => 'v1.0.8' }
