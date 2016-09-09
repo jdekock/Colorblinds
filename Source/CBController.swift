@@ -19,8 +19,16 @@ public class CBController: NSObject, UIActionSheetDelegate {
         super.init()
     }
     
+    /**
+     Colorblinds can be easily activated through the sharedinstance. This makes it easy to start and stop a single instance of Colorblinds.
+     */
     public static let sharedInstance = CBController()
     
+    /**
+     Call this method to initiate Colorblinds on your window. Colorblinds only supports one window at the moment.
+     
+     - parameter window: The window on which you would like to add the action and colorblind mode
+     */
     public func startForWindow(window: UIWindow) {
         mainWindow = window
         

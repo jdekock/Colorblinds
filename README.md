@@ -37,7 +37,6 @@ CBController.sharedInstance.startForWindow(window!)
 ```
 
 # Todos
- - Add CI
  - Support Carthage
  - Support animations
  - Support more color blindness types

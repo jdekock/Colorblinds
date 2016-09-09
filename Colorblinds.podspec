@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Colorblinds'
   s.version          = '1.0.10'
-  s.summary          = 'Colorblinds is an easy to use library so simulate color blindness in your app.'
+  s.summary          = 'Colorblinds is an easy to use library to simulate color blindness in your app.'
 
   s.description      = <<-DESC
 Colorblinds is a easy to use library to simulate color blindness within your app. The feature can be easily activated with a 3-tap gesture.
