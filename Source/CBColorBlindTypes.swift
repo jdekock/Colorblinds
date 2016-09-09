@@ -12,7 +12,7 @@ import Foundation
  Type of color blindness.
  
  - Deuteranomaly: Malfunctioning M-cone (green).
- - Deuteranopia: Missing M-cone (green).
+ - Deuteranopia: Missing. M-cone (green).
  - Protanomaly: Malfunctioning L-cone (red).
  - Protanopia: Missing L-cone (red).
  */
