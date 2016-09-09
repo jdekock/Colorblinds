@@ -9,6 +9,9 @@ Colorblinds is a easy to use library to simulate color blindness within your app
 - Deuteranopia
 - Protanomaly
 - Protanopia
+ 
+<img src="https://github.com/jordidekock/Colorblinds/blob/master/screen1.PNG" width="300">
+<img src="https://github.com/jordidekock/Colorblinds/blob/master/screen2.PNG" width="300">
 
 # Compatibility
 Colorblinds requires iOS 8 or higher and is written in Swift 2.2.
