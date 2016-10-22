@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Colorblinds'
-  s.version          = '1.0.11'
+  s.version          = '1.1'
   s.summary          = 'Colorblinds is an easy to use library to simulate color blindness in your app.'
 
   s.description      = <<-DESC
