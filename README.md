@@ -16,7 +16,7 @@ Colorblinds is a easy to use library to simulate color blindness within your app
 <img src="https://github.com/jordidekock/Colorblinds/blob/master/screen2.PNG" width="300">
 
 # Compatibility
-Colorblinds requires iOS 8 or higher and is written in Swift 2.2.
+Colorblinds requires iOS 8 or higher and is written in Swift 3.
 
 ### Using CocoaPods
 Colorblinds is available through [CocoaPods](http://cocoapods.org). To install

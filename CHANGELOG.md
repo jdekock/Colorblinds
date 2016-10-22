@@ -2,6 +2,10 @@
 
 -----
 
+## [1.1 - Converted to Swift 3](https://github.com/jordidekock/Colorblinds/releases/tag/v1.1) (2016-10-22)
+
+-----
+
 ## [1.0.11 - Updated documentation](https://github.com/jordidekock/Colorblinds/releases/tag/v1.0.11) (2016-09-09)
 
 #### add

@@ -14,6 +14,6 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Colorblinds"
-        self.view.backgroundColor = .blueColor()
+        self.view.backgroundColor = .blue
     }
 }
