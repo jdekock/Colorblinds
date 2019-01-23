@@ -2,6 +2,13 @@
 
 -----
 
+## [1.2 - Converted to Swift 4.2](https://github.com/jordidekock/Colorblinds/releases/tag/v1.2) (2018-01-23)
+
+#### add
+* Added support for more colorblind types: Tritanomaly, tritanopia, achromatomaly, achromatopsia
+
+-----
+
 ## [1.1 - Converted to Swift 3](https://github.com/jordidekock/Colorblinds/releases/tag/v1.1) (2016-10-22)
 
 -----
