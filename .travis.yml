@@ -2,6 +2,5 @@ language: objective-c
 xcode_project: ColorBlinds.xcodeproj
 xcode_scheme: ColorBlinds
 osx_image: xcode10.1
-script: xctool -project ColorBlinds.xcodeproj -scheme ColorBlinds build  CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 script:
     - xcodebuild clean test -project ColorBlinds.xcodeproj -scheme ColorBlinds -destination "platform=iOS Simulator,name=iPhone X,OS=12.1" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
