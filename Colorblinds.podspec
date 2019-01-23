@@ -16,5 +16,6 @@ Colorblinds is a easy to use library to simulate color blindness within your app
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Source/*'
+  s.swift_version = '4.2'
 
 end
