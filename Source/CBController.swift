@@ -22,7 +22,7 @@ open class CBController: NSObject, UIActionSheetDelegate {
     /**
      Colorblinds can be easily activated through the sharedinstance. This makes it easy to start and stop a single instance of Colorblinds.
      */
-    open static let sharedInstance = CBController()
+    public static let sharedInstance = CBController()
     
     /**
      Call this method to initiate Colorblinds on your window. Colorblinds only supports one window at the moment.
@@ -38,7 +38,7 @@ open class CBController: NSObject, UIActionSheetDelegate {
         mainWindow.addGestureRecognizer(tapGesture)
     }
     
-    func startColorBlinds() {
+    @objc func startColorBlinds() {
         if timer != nil {
             imageOverlay.removeFromSuperview()
             timer.invalidate()
@@ -104,7 +104,7 @@ open class CBController: NSObject, UIActionSheetDelegate {
         //done
     }
     
-    func updateScreen() {
+    @objc func updateScreen() {
         self.imageOverlay.removeFromSuperview()
         UIGraphicsBeginImageContextWithOptions(self.mainWindow.frame.size, false, 0.0)
         self.mainWindow.layer.render(in: UIGraphicsGetCurrentContext()!)
@@ -115,11 +115,11 @@ open class CBController: NSObject, UIActionSheetDelegate {
         //Check if screen changed
         var screenshotData = Data()
         if self.screenshot != nil {
-            screenshotData = UIImagePNGRepresentation(self.screenshot)!;
+            screenshotData = self.screenshot.pngData()!;
             print("got screenshot data")
         }
         
-        let imageData = UIImagePNGRepresentation(image!);
+        let imageData = image!.pngData();
         
         if screenshotData != imageData {
             print("replace image overlay with new image")

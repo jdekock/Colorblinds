@@ -21,6 +21,7 @@ enum ColorBlindType : Int {
     case deuteranopia = 2
     case protanomaly = 3
     case protanopia = 4
+    case tritanopia = 5
 }
 
 class CBColorBlindTypes: NSObject {
@@ -43,6 +44,7 @@ class CBColorBlindTypes: NSObject {
                     (red*0.33333)+(green*0.66667)+(blue*0.0),
                     (red*0.0)+(green*0.125)+(blue*0.875)]
         }
+    }
         
     }
 }

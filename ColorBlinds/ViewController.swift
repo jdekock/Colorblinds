@@ -23,9 +23,7 @@ class ViewController: UIViewController {
         
         self.navigationController?.navigationBar.barTintColor = .red
         self.navigationController?.navigationBar.tintColor = .white
-        
-        let titleDict = [NSForegroundColorAttributeName: UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = titleDict
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
         self.title = "Colorblinds"
         
@@ -38,12 +36,12 @@ class ViewController: UIViewController {
         let nextViewButton = UIButton.init(type: .custom)
         nextViewButton.frame = CGRect(x: 20, y: testImage.frame.size.height + testImage.frame.origin.y + 20, width: self.view.bounds.size.width - 40, height: 50)
         nextViewButton.backgroundColor = .red
-        nextViewButton.setTitle("Next view", for: UIControlState())
+        nextViewButton.setTitle("Next view", for: UIControl.State())
         nextViewButton.addTarget(self, action: #selector(ViewController.nextView), for: .touchUpInside)
         self.view.addSubview(nextViewButton)
     }
     
-    func nextView() {
+    @objc func nextView() {
         let secondVC = SecondViewController()
         self.navigationController?.pushViewController(secondVC, animated: true)
         
