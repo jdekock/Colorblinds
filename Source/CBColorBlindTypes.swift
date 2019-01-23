@@ -21,7 +21,10 @@ enum ColorBlindType : Int {
     case deuteranopia = 2
     case protanomaly = 3
     case protanopia = 4
-    case tritanopia = 5
+    case tritanomaly = 5
+    case tritanopia = 6
+    case achromatomaly = 7
+    case achromatopsia = 8
 }
 
 class CBColorBlindTypes: NSObject {
@@ -43,8 +46,22 @@ class CBColorBlindTypes: NSObject {
             return [(red*0.81667)+(green*0.18333)+(blue*0.0),
                     (red*0.33333)+(green*0.66667)+(blue*0.0),
                     (red*0.0)+(green*0.125)+(blue*0.875)]
+        case .tritanopia:
+            return [(red*0.95)+(green*0.05)+(blue*0.0),
+                    (red*0)+(green*0.43)+(blue*0.56),
+                    (red*0.0)+(green*0.4755)+(blue*0.525)]
+        case .tritanomaly:
+            return [(red*0.9667)+(green*0.033)+(blue*0.0),
+                    (red*0)+(green*0.733)+(blue*0.2667),
+                    (red*0.0)+(green*0.183)+(blue*0.8167)]
+        case .achromatomaly:
+            return [(red*0.618)+(green*0.32)+(blue*0.062),
+                    (red*0.163)+(green*0.775)+(blue*0.062),
+                    (red*0.163)+(green*0.32)+(blue*0.516)]
+        case .achromatopsia:
+            return [(red*0.299)+(green*0.587)+(blue*0.114),
+                    (red*0.299)+(green*0.587)+(blue*0.114),
+                    (red*0.299)+(green*0.587)+(blue*0.114)]
         }
-    }
-        
     }
 }

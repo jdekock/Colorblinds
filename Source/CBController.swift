@@ -67,6 +67,26 @@ open class CBController: NSObject, UIActionSheetDelegate {
             self.setColor()
         }))
         
+        actionSheet.addAction(UIAlertAction(title: "Tritanomaly", style: .default, handler: { (action) in
+            self.colorMode = .tritanomaly
+            self.setColor()
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Tritanopia", style: .default, handler: { (action) in
+            self.colorMode = .tritanopia
+            self.setColor()
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Achromatomaly", style: .default, handler: { (action) in
+            self.colorMode = .achromatomaly
+            self.setColor()
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Achromatopsia", style: .default, handler: { (action) in
+            self.colorMode = .achromatopsia
+            self.setColor()
+        }))
+        
         actionSheet.addAction(UIAlertAction(title: "Stop colorblind mode", style: .destructive, handler: { (action) in
             self.stopColorblinds()
         }))
