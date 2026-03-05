@@ -2,6 +2,13 @@
 
 -----
 
+## [2.0 - Major release](https://github.com/jordidekock/Colorblinds/releases/tag/v2.0) (2026-03-05)
+
+A completely new version of the library with support for SwiftUI and UIKit. Still supporting all the different types of colorblindness.
+Also I removed the support for Cocoapods but added the SPM support.
+
+-----
+
 ## [1.2 - Converted to Swift 4.2](https://github.com/jordidekock/Colorblinds/releases/tag/v1.2) (2018-01-23)
 
 #### add

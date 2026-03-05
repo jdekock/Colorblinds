@@ -1,48 +1,110 @@
-[![Build Status](https://travis-ci.org/jordidekock/Colorblinds.svg?branch=master)](https://travis-ci.org/jordidekock/Colorblinds)
-[![Platforms iOS](https://img.shields.io/badge/Platforms-iOS-lightgray.svg?style=flat)](http://www.apple.com)
-[![Language Swift 4.2](https://img.shields.io/badge/Language-Swift%204.2-orange.svg?style=flat)](https://swift.org)
-[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/jordidekock/Colorblinds/LICENSE)
-[![Version](https://img.shields.io/cocoapods/v/Colorblinds.svg?style=flat)](http://cocoadocs.org/docsets/Colorblinds)
-
 # Colorblinds
-Colorblinds is a easy to use library to simulate color blindness within your app. The feature can be easily activated with a 3-tap gesture. Once activated you can choose from four types of color blindness:
 
-- Deuteranomaly
-- Deuteranopia
-- Protanomaly
-- Protanopia
-- Tritanomaly
-- Tritanopia
-- Achromatomaly
-- Achromatopsia
- 
-<img src="https://github.com/jordidekock/Colorblinds/blob/master/screen1.PNG" width="300">
-<img src="https://github.com/jordidekock/Colorblinds/blob/master/screen2.PNG" width="300">
+A Swift Package for simulating color blindness in iOS apps. Uses GPU-accelerated color transformation for real-time, full frame rate simulation.
 
-# Compatibility
-Colorblinds requires iOS 8 or higher and is written in Swift 4.2.
+## Requirements
 
-### Using CocoaPods
-Colorblinds is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+- iOS 17+
+- Swift 5.9+
 
-```ruby
-pod ‘Colorblinds’
+## Installation
+
+Add Colorblinds to your project via Swift Package Manager:
+
+```
+https://github.com/jdekock/Colorblinds
 ```
 
-### Manually
-Clone or Download this Repo. Then simply drag files in the folder ```Source``` to your Xcode project.
+Or add it to your `Package.swift`:
 
+```swift
+dependencies: [
+    .package(url: "https://github.com/dekock/Colorblinds", from: "1.0.0")
+]
+```
 
-# Example
-```Swift
+## Usage
+
+### SwiftUI
+
+**Apply a specific simulation:**
+
+```swift
 import Colorblinds
-CBController.sharedInstance.startForWindow(window!)
+
+struct ContentView: View {
+    var body: some View {
+        MyAppView()
+            .colorBlindSimulation(.deuteranopia)
+    }
+}
 ```
 
-# Todos
- - Support Carthage
- - Support animations
- 
-# License
+**Bind to an optional type** (nil removes the filter):
+
+```swift
+@State private var selectedType: ColorBlindType?
+
+var body: some View {
+    MyAppView()
+        .colorBlindSimulation(selectedType)
+}
+```
+
+**Full simulator experience** — triple-tap anywhere to open a picker sheet:
+
+```swift
+var body: some View {
+    MyAppView()
+        .colorBlindSimulator()
+}
+```
+
+> **Note:** Apply the modifier to your content views rather than to a `NavigationStack` or `TabView`. These container views use internal rendering (e.g. navigation bar materials) that conflicts with the Metal shader, resulting in a yellow warning screen.
+
+### UIKit
+
+**Full simulator experience** — call `start` with your app's window, then triple-tap to open a picker:
+
+```swift
+import Colorblinds
+
+func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options: UIScene.ConnectionOptions) {
+    guard let windowScene = scene as? UIWindowScene,
+          let window = windowScene.windows.first else { return }
+
+    ColorBlindOverlay.shared.start(in: window)
+}
+```
+
+**Direct control:**
+
+```swift
+// Apply a specific simulation
+ColorBlindOverlay.shared.simulate(.protanopia, in: window)
+
+// Remove the simulation
+ColorBlindOverlay.shared.stop()
+```
+
+## Supported Types
+
+| Type | Description |
+|---|---|
+| `deuteranomaly` | Reduced green sensitivity (most common) |
+| `deuteranopia` | No green cones |
+| `protanomaly` | Reduced red sensitivity |
+| `protanopia` | No red cones |
+| `tritanomaly` | Reduced blue sensitivity |
+| `tritanopia` | No blue cones |
+| `achromatomaly` | Reduced overall color sensitivity |
+| `achromatopsia` | Complete color blindness |
+
+## How It Works
+
+- **SwiftUI** — Uses a `[[stitchable]]` Metal shader via `.colorEffect()`, running directly in SwiftUI's render pipeline. No screen capture, no overlay. Truly live at full frame rate.
+- **UIKit** — Uses `CADisplayLink` to capture the window's layer, applies a `CIColorMatrix` filter on the GPU, and renders the result to an `MTKView` overlay.
+
+## License
+
 MIT
