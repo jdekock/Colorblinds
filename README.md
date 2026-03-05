@@ -1,3 +1,7 @@
+<picture>
+  <img src="Assets/header.png" alt="Colorblinds — Easily simulate color blindness in your app">
+</picture>
+
 # Colorblinds
 
 A Swift Package for simulating color blindness in iOS apps. Uses GPU-accelerated color transformation for real-time, full frame rate simulation.
@@ -19,9 +23,46 @@ Or add it to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/dekock/Colorblinds", from: "1.0.0")
+    .package(url: "https://github.com/jdekock/Colorblinds", from: "1.0.0")
 ]
 ```
+
+## Example
+
+<p align="center">
+  <img src="Assets/example.gif" alt="Colorblinds demo" width="250">
+</p>
+
+<table>
+<tr>
+<td width="25%">
+<center>Normal</center>
+</td>
+<td width="25%">
+<center>Picker</center>
+</td>
+<td width="25%">
+<center>Tritanopia</center>
+</td>
+<td width="25%">
+<center>Achromatopsia</center>
+</td>
+</tr>
+<tr>
+<td width="25%">
+<img src="Assets/example_1.png"></img>
+</td>
+<td width="25%">
+<img src="Assets/example_2.png"></img>
+</td>
+<td width="25%">
+<img src="Assets/example_3.png"></img>
+</td>
+<td width="25%">
+<img src="Assets/example_4.png"></img>
+</td>
+</tr>
+</table>
 
 ## Usage
 
