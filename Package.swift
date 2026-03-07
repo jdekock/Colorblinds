@@ -1,4 +1,4 @@
-// swift-tools-version: 5.9
+// swift-tools-version: 6.2
 
 import PackageDescription
 
@@ -16,11 +16,19 @@ let package = Package(
     targets: [
         .target(
             name: "Colorblinds",
-            resources: [.process("Shaders")]
+            resources: [.process("Shaders")],
+            swiftSettings: [
+                .enableUpcomingFeature("InferIsolatedConformances"),
+                .enableUpcomingFeature("NonisolatedNonsendingByDefault")
+            ]
         ),
         .testTarget(
             name: "ColorblindsTests",
-            dependencies: ["Colorblinds"]
+            dependencies: ["Colorblinds"],
+            swiftSettings: [
+                .enableUpcomingFeature("InferIsolatedConformances"),
+                .enableUpcomingFeature("NonisolatedNonsendingByDefault")
+            ]
         )
     ]
 )
